@@ -5,12 +5,13 @@ import {GlobalStyle} from './styles/GlobalStyle';
 import {Router} from "@reach/router";
 import NotFound from "./NotFound";
 import Movie from "./Movie";
+import {BASE_PATH} from "./const";
 
 const App = () => {
     return(
         <>
             <Header/>
-            <Router>
+            <Router basepath={BASE_PATH}>
                 <Home path='/'/>
                 <Movie path='/:movieId'/>
                 <NotFound default/>
